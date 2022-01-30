@@ -1,4 +1,4 @@
-# Libft
+# Libft @ Hive Helsinki
 
 Libft is an individual project at Hive that requires us to re-create some standard
 C library functions including some additional ones that can be used later to build a
