@@ -77,6 +77,7 @@ SRC = ft_isalpha.c \
 		ft_abs.c \
 		ft_intlen.c \
 		ft_isspace.c \
+		ft_2d_free.c \
 
 OBJ = $(SRC:.c=.o)
 
