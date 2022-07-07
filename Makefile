@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ajones <ajones@student.42.fr>              +#+  +:+       +#+         #
+#    By: aaronjones <aaronjones@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/04 12:29:47 by ajones            #+#    #+#              #
-#    Updated: 2021/12/29 16:26:49 by ajones           ###   ########.fr        #
+#    Updated: 2022/07/07 15:49:00 by aaronjones       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,7 @@ SRC = ft_isalpha.c \
 		ft_intlen.c \
 		ft_isspace.c \
 		ft_2d_free.c \
+		get_next_line.c \
 
 OBJ = $(SRC:.c=.o)
 

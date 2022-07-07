@@ -6,12 +6,14 @@
 /*   By: aaronjones <aaronjones@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:31:43 by ajones            #+#    #+#             */
-/*   Updated: 2022/06/16 14:47:07 by aaronjones       ###   ########.fr       */
+/*   Updated: 2022/07/07 15:47:56 by aaronjones       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 16
+# define FD_SIZE 4096
 
 # include <string.h>
 # include <unistd.h>
@@ -90,5 +92,6 @@ char	**ft_strsplit(char const *s, char c);
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list	*ft_lstnew(void const *content, size_t content_size);
 t_list	*ft_lstlast(t_list *lst);
+int		get_next_line(const int fd, char **line);
 
 #endif
