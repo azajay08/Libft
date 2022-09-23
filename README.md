@@ -6,4 +6,6 @@ library of useful functions for the rest of the program.
 
 We are limited to what existing functions we are allowed to use. The Challenge is trying
 to create useful functions using only a select few. The Libft will be used in many future
-projects to come, so it is important to update it with useful functions.
+projects to come, so it is important to update it with useful functions. This is the version
+that was submitted at the time. There has since been added functions to the libft in later
+projects including my own printf function.
