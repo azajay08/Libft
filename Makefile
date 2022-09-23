@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aaronjones <aaronjones@student.42.fr>      +#+  +:+       +#+         #
+#    By: ajones <ajones@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/04 12:29:47 by ajones            #+#    #+#              #
-#    Updated: 2022/07/07 15:49:00 by aaronjones       ###   ########.fr        #
+#    Created: 2022/09/05 10:56:43 by ajones            #+#    #+#              #
+#    Updated: 2022/09/16 17:08:44 by ajones           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,22 +78,42 @@ SRC = ft_isalpha.c \
 		ft_intlen.c \
 		ft_isspace.c \
 		ft_2d_free.c \
+		ft_strjoin_free1.c \
+		ft_strjoin_free2.c \
+		ft_power.c \
+		ft_power_double.c \
+		ft_round.c \
+		ft_is_neg.c \
 		get_next_line.c \
 
 OBJ = $(SRC:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
+GREEN := '\033[1;3;32m'
+CYAN := '\033[2;3;36m'
+RED := '\033[2;3;31m'
+RESET := \033[0m
+P_LIB := ft_printf/libftprintf.a
+
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAGS) -c $(SRC)
-	ar rc $(NAME) $(OBJ)
+	@echo ${CYAN}"Compiling libft...\n${RESET}"
+	@gcc $(FLAGS) -c $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	@make -C ft_printf
+	@cp $(P_LIB) $(NAME)
+	@echo ${GREEN}"Compiled successfully${RESET}\n"
 
 clean:
-	rm -f $(OBJ)
-
+	@echo ${RED}"Removing .o files...${RESET}"
+	@rm -f $(OBJ)
+	@make -C ft_printf clean
+	
 fclean: clean
-	rm -f $(NAME)
+	@echo ${RED}"Removing libft.a...${RESET}"
+	@rm -f $(NAME)
+	@make -C ft_printf fclean
 
 re: fclean all

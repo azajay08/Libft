@@ -1,34 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin_free1.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaronjones <aaronjones@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ajones <ajones@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 17:16:09 by ajones            #+#    #+#             */
-/*   Updated: 2022/08/18 15:48:25 by aaronjones       ###   ########.fr       */
+/*   Created: 2022/09/05 10:55:57 by ajones            #+#    #+#             */
+/*   Updated: 2022/09/05 10:55:59 by ajones           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin_free1(char *s1, char *s2)
 {
 	char	*str;
 	size_t	i;
+	size_t	j;
 
 	i = 0;
-	if (!s)
+	j = 0;
+	if (!s1 || !s2)
 		return (NULL);
-	str = ((char *)malloc(sizeof(char) * (len + 1)));
+	str = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
 	if (!str)
 		return (NULL);
-	while (i < len && s[start] != '\0')
+	while (s1[i] != '\0')
 	{
-		str[i] = s[start];
+		str[i] = s1[i];
 		i++;
-		start++;
 	}
-	str[i] = '\0';
+	while (s2[j] != '\0')
+	{
+		str[i + j] = s2[j];
+		j++;
+	}
+	str[i + j] = '\0';
+	free(s1);
 	return (str);
 }

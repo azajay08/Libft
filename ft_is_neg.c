@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_2d_free.c                                       :+:      :+:    :+:   */
+/*   ft_is_neg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajones <ajones@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 10:52:56 by ajones            #+#    #+#             */
-/*   Updated: 2022/09/05 10:53:01 by ajones           ###   ########.fr       */
+/*   Created: 2022/09/05 10:52:47 by ajones            #+#    #+#             */
+/*   Updated: 2022/09/05 10:52:51 by ajones           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_2d_free(char **newstr)
+int	ft_is_neg(double num)
 {
-	int		x;
-	char	**temp;
+	long long int	*bin_num;
+	char			sign;
 
-	if (!newstr)
-		return (NULL);
-	x = 0;
-	temp = newstr;
-	while (temp[x] != NULL)
-	{
-		free (temp[x]);
-		temp[x] = NULL;
-		x++;
-	}
-	free (newstr);
-	newstr = NULL;
-	return (newstr);
+	bin_num = (long long int *)&num;
+	sign = (char)(*bin_num >> 63);
+	if (sign == 0)
+		return (0);
+	else
+		return (1);
 }

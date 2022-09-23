@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_round.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaronjones <aaronjones@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 17:16:09 by ajones            #+#    #+#             */
-/*   Updated: 2022/08/18 15:48:25 by aaronjones       ###   ########.fr       */
+/*   Created: 2022/09/01 01:14:35 by aaronjones        #+#    #+#             */
+/*   Updated: 2022/09/01 22:29:51 by aaronjones       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+long double	ft_round(long double num, int i)
 {
-	char	*str;
-	size_t	i;
+	long double	round_num;
+	long double	dec;
 
-	i = 0;
-	if (!s)
-		return (NULL);
-	str = ((char *)malloc(sizeof(char) * (len + 1)));
-	if (!str)
-		return (NULL);
-	while (i < len && s[start] != '\0')
+	dec = 0.5;
+	while (i > 0)
 	{
-		str[i] = s[start];
-		i++;
-		start++;
+		dec = dec / 10;
+		i--;
 	}
-	str[i] = '\0';
-	return (str);
+	if (num >= 0)
+		round_num = num + dec;
+	else
+		round_num = num - dec;
+	return (round_num);
 }

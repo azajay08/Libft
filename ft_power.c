@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_2d_free.c                                       :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajones <ajones@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 10:52:56 by ajones            #+#    #+#             */
-/*   Updated: 2022/09/05 10:53:01 by ajones           ###   ########.fr       */
+/*   Created: 2022/09/05 10:55:47 by ajones            #+#    #+#             */
+/*   Updated: 2022/09/05 10:55:50 by ajones           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_2d_free(char **newstr)
+int	ft_power(int base, int power)
 {
-	int		x;
-	char	**temp;
+	int	i;
+	int	n;
 
-	if (!newstr)
-		return (NULL);
-	x = 0;
-	temp = newstr;
-	while (temp[x] != NULL)
+	i = 0;
+	n = 1;
+	while (i < power)
 	{
-		free (temp[x]);
-		temp[x] = NULL;
-		x++;
+		n *= base;
+		i++;
 	}
-	free (newstr);
-	newstr = NULL;
-	return (newstr);
+	return (n);
 }
