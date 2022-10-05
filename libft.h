@@ -6,13 +6,13 @@
 /*   By: ajones <ajones@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 10:56:31 by ajones            #+#    #+#             */
-/*   Updated: 2022/09/16 16:35:44 by ajones           ###   ########.fr       */
+/*   Updated: 2022/10/06 02:22:28 by ajones           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define BUFF_SIZE 16
+# define BUFF_SIZE 1
 # define FD_SIZE 4096
 
 # include "ft_printf/includes/ft_printf.h"
