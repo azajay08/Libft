@@ -28,5 +28,5 @@ As with all Hive projects, they come with restraints and limitations. We have to
 I continue to add new functions to the `libft`. I have been adding functions that could be considered 
 useful and universal, not only specific to the projects that I am doing. I have also added
 my project `ft_print` to the `libft`. This project was to recode the function `printf`. Because
-we are restricted to certain functions in our projects. It is forbidden to use the `printf` function
+we are restricted to certain functions in our projects, it is forbidden to use the `printf` function
 so it is very handy to have my own one that I can use freely.
