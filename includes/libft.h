@@ -6,7 +6,7 @@
 /*   By: ajones <ajones@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 10:56:31 by ajones            #+#    #+#             */
-/*   Updated: 2023/01/18 14:51:50 by ajones           ###   ########.fr       */
+/*   Updated: 2023/02/17 14:11:46 by ajones           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct s_list
 
 typedef struct s_line
 {
+	int				num;
 	char			*line;
 	struct s_line	*next;
 }					t_line;
