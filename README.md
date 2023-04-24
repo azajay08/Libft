@@ -32,10 +32,10 @@ at Hive, so it is very handy to have my own one that I can use freely.
 
 Although `libft` was one of the very first projects at Hive, it is one of the most important ones. This project had one of the most strict evaluation processes, and rightly so. The functions in this library must be perfect with no chance of seg faulting or having memory leaks in order to rule them out when debugging projects where the `libft` is used.
 
-A `Makefile` is included compile the library. The `Makefile` contains the rules:
-* `all`- makes all
+A `Makefile` is included to compile the library. The `Makefile` contains the rules:
+* `all`- makes the target `all`
 * `clean`- cleans the binary .o files
-* `fclean` - does what `clean` does along with deleting the library .a file
+* `fclean` - does what `clean` and deletes the library .a file
 * `re` - goes through all the commands
 
-A header file is included with all the function protoypes, macros and structs.
+A header file is included with all the function protoypes, macros and structs. After the `libft` has been compiled, the header `#include "libft.h"` must be included in the files that are using `libft`.
