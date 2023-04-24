@@ -26,6 +26,8 @@ As with all Hive projects, they come with restraints and limitations. We have to
 ```
 
 I am constantly adding functions to the `libft`. I have been adding functions that could be considered 
-useful and universal so that they can used in many projects. I have added
+useful and universal so that they can be used in many projects. I have added
 `ft_print` to the `libft`. `ft_print` is a project to recode the function `printf`. The use of `printf` is forbidden
 at Hive, so it is very handy to have my own one that I can use freely.
+
+Although `libft` was one of the very first projects at Hive, it is one of the most important ones. This project had one of the most strict evaluation processes, and rightly so. The functions in this library must be perfect with no chance of seg faulting or having memory leaks in order to rule them out when debugging projects where the `libft` is used.
